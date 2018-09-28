@@ -65,13 +65,5 @@ post("/api/productImage/delete") // 请求的url，请求的方法是get
                 .andReturn().getResponse().getContentAsString(); // 将相应的数据转换为字符串
         System.out.println("-----返回的json = " + responseString);
     }
-
-    private SqlSessionFactory sqlSessionFactory = null;
-
-    @Before
-    public void init() throws IOException {
-        sqlSessionFactory = new SqlSessionFactoryBuilder().build( Resources.getResourceAsStream("SqlMapConfig.xml"));
-    }
-
-
+    
 }
